@@ -8,7 +8,7 @@ async function getData() {
   data = result["records"];
   //   console.log(data);
   getWeather(page);
-  createBtn();
+  // createBtn();
   let mybutton = document.querySelector("button");
   mybutton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -84,11 +84,11 @@ function getWeather(page) {
   }
 }
 
-function createBtn() {
-  const container2 = document.querySelector("body");
-  let section = document.createElement("section");
-  let button = document.createElement("button");
-  section.appendChild(button);
-  container2.appendChild(section);
-  button.textContent = "Load More";
-}
+// function createBtn() {
+//   const container2 = document.querySelector("#weather_now");
+//   let section = document.createElement("section");
+//   let button = document.createElement("button");
+//   section.appendChild(button);
+//   container2.appendChild(section);
+//   button.textContent = "Load More";
+// }
