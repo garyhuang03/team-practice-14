@@ -1,0 +1,75 @@
+#star{
+    display: inline-flex;
+    margin: 30px 0px;
+}
+#star .star_box{
+    width: 56%;
+}
+#star-title{
+    text-align: center;
+    font-family: "微軟正黑體";
+    margin-top: 50px;
+}
+#star .button{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #354c75;
+    border: none;
+    border-radius: 5px;
+    margin: 1%;
+    box-shadow: 6px 1px 9px 1px rgb(0 0 0 / 20%);
+    cursor: pointer;
+}
+#star .button:active{
+    background-color: white;
+    color:black;
+}
+#star .sun_up_box{
+    width: 25%;
+    position: relative;
+    background-image: url(../imgs/sun_up.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin: 0 1% 0 0;
+
+}
+#star .sun_city{
+    margin: 30px;
+}
+#star .sun_text{
+    margin: 50px 0;
+}
+#star .sun_time{
+    margin: 30px;
+}
+#star .sun_up33_box{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px #354c75 solid;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    background-image: url("../imgs/sun_up.jpg");
+}
+#star .sun_down_box{
+    width: 25%;
+    position: relative;
+    background-image: url(../imgs/sun_down.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0 1%;
+}
