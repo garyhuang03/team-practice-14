@@ -9,7 +9,7 @@ async function getData() {
   //   console.log(data);
   getWeather(page);
   createBtn();
-  let mybutton = document.querySelector("button");
+  let mybutton = document.querySelector("#mybtn");
   mybutton.addEventListener("click", (e) => {
     e.preventDefault();
     getWeather(++page);
