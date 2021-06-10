@@ -1,10 +1,11 @@
-* {
-    /* border: solid 1px #000; */
-}
+/* * {
+    border: solid 1px #000;
+} */
 
 #weather-title {
     text-align: center;
     font-family: "微軟正黑體";
+    margin-top: 20px;
 }
 
 #weather {
@@ -14,6 +15,7 @@
 }
 
 #weather>div {
+    /* width: 90%; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -24,7 +26,7 @@
 }
 
 #weather .weather-card {
-    width: 18%;
+    width: 210px;
     height: 370px;
     padding: 40px 8px;
     text-align: center;
@@ -70,11 +72,11 @@
 }
 
 #weather .next {
-    right: -30px;
+    right: 0px;
 }
 
 #weather .prev {
-    left: -30px;
+    left: 0px;
 }
 
 #weather .prev:hover, .next:hover {

@@ -8,12 +8,12 @@ link.href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.mi
 document.getElementsByTagName("head")[0].appendChild(link);
 
 let weathers=null;
-let page = 0;
+let weartherPage = 0;
 fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?elementName=MaxT&elementName=Wx&format=JSON&Authorization="+CWB_API_KEY).then((response)=>{
 	return response.json();
 }).then((data)=>{
 	weathers=data.records;
-    renderWeather(page);
+    renderWeather(weartherPage);
 });
 
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -31,10 +31,10 @@ function renderWeather(index){
     removeWeatherData();
     const weatherBox = document.querySelector("#weather");
     let cardContainer = document.createElement("div");
-    if(index < 0) page = Math.floor(weathers.location.length / 5);
-    if(index * 5 > weathers.location.length) page = 0;
-    let start = page * 5;
-    let end = page * 5 + 5;
+    if(index < 0) weartherPage = Math.floor(weathers.location.length / 5);
+    if(index * 5 > weathers.location.length) weartherPage = 0;
+    let start = weartherPage * 5;
+    let end = weartherPage * 5 + 5;
     for(let i = start; i < end; i++){
         if(weathers.location[i]){
             // weather card
@@ -80,12 +80,12 @@ function renderWeather(index){
     }
     // page number
     const pageNumber = document.createElement("p");
-    pageNumber.textContent = "第 " + parseInt(page + 1) + " 頁，" + "共 " + parseInt(Math.floor(weathers.location.length / 5) + 1) + " 頁";
+    pageNumber.textContent = "第 " + parseInt(weartherPage + 1) + " 頁，" + "共 " + parseInt(Math.floor(weathers.location.length / 5) + 1) + " 頁";
     weatherBox.appendChild(pageNumber);
 }
 
 function plusSlides(n){
-    renderWeather(page += n);
+    renderWeather(weartherPage += n);
 }
 
 function createSlidesBtn(){
