@@ -8,7 +8,7 @@ link.href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.mi
 document.getElementsByTagName("head")[0].appendChild(link);
 
 let weathers=null;
-let weartherPage = 0;
+let weatherPage = 0;
 fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?elementName=MaxT&elementName=Wx&format=JSON&Authorization="+CWB_API_KEY).then((response)=>{
 	return response.json();
 }).then((data)=>{
@@ -53,10 +53,10 @@ function renderWeather(index){
             // weather icon
             const countryIcon = document.createElement("i");
             // wearther code
-            let weaherCode =  location.weatherElement[0].time[0].parameter.parameterValue
-            if(weaherCode <= 3) countryIcon.className = "fas fa-sun country-icon";
-            if(3 < weaherCode <= 7) countryIcon.className = "fas fa-cloud country-icon";
-            if(weaherCode > 7) countryIcon.className = "fas fa-cloud-showers-heavy country-icon";
+            let weatherCode =  location.weatherElement[0].time[0].parameter.parameterValue
+            if(weatherCode <= 3) countryIcon.className = "fas fa-sun country-icon";
+            if(3 < weatherCode <= 7) countryIcon.className = "fas fa-cloud country-icon";
+            if(weatherCode > 7) countryIcon.className = "fas fa-cloud-showers-heavy country-icon";
             // date
             const countryDate = document.createElement("p");
             countryDate.className = "country-date";
